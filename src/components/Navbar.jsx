@@ -12,13 +12,15 @@ const Navbar = () => {
           {MenuItems.map((item, index) => {
             return (
               <li key={index}>
-                <a href={item.url}>
-                  <i className={item.icons}></i>{item.title}
+                <a className={item.cName} href={item.url}>
+                  <i className={item.icons}></i>
+                  {item.title}
                 </a>
               </li>
             );
           })}
         </ul>
+        <button>Get Certificate</button>
       </nav>
     </div>
   );
