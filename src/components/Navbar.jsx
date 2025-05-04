@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "../style/Navbar.css";
 import { MenuItems } from "./MenuItems";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [clicked, setClicked] = useState(false);
+
   return (
     <div>
       <nav className="NavbarItems">
         <h1 className="navbar-logo">EduCom</h1>
-        <ul className="nav-menu">
+
+        <div className="menu-icons" onClick={() => setClicked(!clicked)}>
+          <i className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
+        </div>
+
+        <ul className={clicked ? "nav-menu active" : "nav-menu"}>
           {MenuItems.map((item, index) => {
             return (
               <li key={index}>
@@ -19,8 +26,8 @@ const Navbar = () => {
               </li>
             );
           })}
+          <button>Get Certificate</button>
         </ul>
-        <button>Get Certificate</button>
       </nav>
     </div>
   );

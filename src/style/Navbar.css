@@ -60,3 +60,50 @@ button:hover {
   background-color: black;
   color: white;
 }
+
+@media screen and (max-width: 850px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 80px 0 30px 0;
+    margin: 0;
+  }
+
+  .nav-links {
+    display: block;
+    width: 80%;
+    font-size: 1.2rem;
+    padding: 2rem;
+  }
+
+  .nav-links:hover {
+    background-color: rgb(24, 7, 84);
+    transition: none;
+  }
+
+  button {
+    display: none;
+  }
+
+  .nav-links-mobile {
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+    margin: auto;
+    border-radius: 4px;
+    width: 100%;
+    background: rgb(24, 7, 84);
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+}
